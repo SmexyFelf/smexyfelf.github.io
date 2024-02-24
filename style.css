@@ -1,0 +1,23 @@
+.cta-button {
+    margin: 20px; /* Adds space around the button */
+    padding: 10px 20px; /* Increases space inside the button */
+    /* Keep other existing styles */
+}
+
+/* Define the initial state of your elements */
+.interactive-ice {
+    transition: all 0.5s ease; /* Smooth transition for the hover effect */
+    cursor: pointer; /* Change cursor to indicate interactivity */
+    /* Add any other base styles here */
+}
+
+/* Define the hover state with the ice effect */
+.interactive-ice:hover {
+    color: #a0d8ef; /* Example of changing the color to simulate freezing */
+    background-image: url('src/choco.jpg'); /* Optional: Add an ice texture overlay */
+    /* Add any additional styles to enhance the ice effect */
+}
+
+.info-box{
+    margin: 30px;
+}
