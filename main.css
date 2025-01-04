@@ -1,0 +1,48 @@
+/* Windows 98 style borders */
+.content, .forum, .forum-post, table, .fake-ads .ad {
+    border: 2px outset #ffffff;
+}
+/* Additional styling for tables to emphasize the neon effect */
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #0ff; /* Neon-like border for table cells */
+    padding: 10px;
+    color: #FFFFFF;
+    text-shadow: 0 0 2px #0ff; /* Subtle glow for text */
+}
+/* Gallery section with flexbox layout */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Gallery item styles with Windows 98 borders */
+.gallery-item {
+    border: 2px outset #ffffff;
+    background-color: #c0c0c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* Example size, adjust based on your design */
+    height: 100px; /* Example size, adjust based on your design */
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+}
+
+/* Example sizes, customize as needed */
+.small { 
+    width: 100px; height: 100px; background-image: url(src/kaguya-boom.gif); background-size: 100%; background-repeat: no-repeat;
+ }
+.medium { 
+    width: 150px; height: 150px; background-image: url(src/cirno-touhou.gif); background-size: 100%;
+ }
+.large { 
+    width: 200px; height: 200px; background-image: url(src/cirno-touhou2.gif); background-size: 100%;
+ }

@@ -1,184 +1,187 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="descrption" content="rea's website among other things i.e Minecraft Server Hosting">
-    <meta name="keywords" content="Cirno, csp_rea, rea, minecraft">
-    <meta name="author" content="csp_rea">
-    <link rel="icon" type="image/jpg" href="src/smallf.jpg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cirno's Wonderland</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="snow.js"></script>
-    <script src="freeze.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #37b8eb; /* Light blue background */
-            color: #333; /* Dark text color */
-            /* overflow: hidden; /* Prevents scrollbars due to animated snowflakes */
-            position: relative; /* Added position relative */
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 50px 20px;
-            text-align: center;
-            position: relative;
-            z-index: 1; /* Added z-index */
-        }
-        .header {
-            font-family: 'Comic Sans MS', cursive, sans-serif; /* Whimsical font */
-            font-size: 3rem;
-            color: #0066cc; /* Cirno's signature blue */
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 102, 204, 0.5); /* Blue text shadow */
-        }
-        .subheader {
-            font-size: 1.5rem;
-            color: #0066cc; /* Cirno's signature blue */
-            margin-bottom: 30px;
-        }
-        .cirno-image {
-            max-width: 100%;
-            border-radius: 50%; /* Circular image */
-            margin-bottom: 20px;
-            box-shadow: 0 0 0px rgba(0, 102, 204, 0.5); /* Blue shadow */
-        }
-        .cta-button {
-            background-color: #0066cc; /* Cirno's signature blue */
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .cta-button:hover {
-            background-color: #0052a3; /* Darker blue on hover */
-        }
-        .info-box {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 102, 204, 0.5); /* Blue shadow */
-            padding: 20px;
-            margin-bottom: 20px;
-            text-align: left;
-            position: relative;
-            overflow: hidden;
-        }
-        .info-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8)); /* Icy gradient overlay */
-            pointer-events: none;
-            z-index: -1; /* Added z-index */
-        }
-        .info-box h3 {
-            color: #0066cc; /* Cirno's signature blue */
-            margin-top: 0;
-        }
-        .info-box p {
-            color: #333; /* Dark text color */
-        }
-        .faq {
-            margin-top: 50px;
-            border-top: 1px solid #0066cc; /* Cirno's signature blue */
-            padding-top: 20px;
-            text-align: left;
-        }
-        .faq h2 {
-            margin-top: 0;
-            color: #0066cc; /* Cirno's signature blue */
-        }
-        .faq dl {
-            margin-top: 20px;
-        }
-        .faq dt {
-            font-weight: bold;
-            color: #0066cc; /* Cirno's signature blue */
-        }
-        .faq dd {
-            color: #333; /* Dark text color */
-            margin-left: 0;
-        }
-        footer {
-            background-color: #0066cc; /* Cirno's signature blue */
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-    @keyframes snowfall {
-        0% {transform: translateY(-100px);}
-        100% {transform: translateY(2200px);}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cirno's Frozen Wonderland</title>
+<link rel="stylesheet" href="main.css">
+<link rel="icon" type="image/jpg" href="src/smallf.jpg">
+<style>
+    body {
+        font-family: 'Courier New', monospace;
+        background-color: #000080; /* Base color in case the image doesn't load */
+        background-image: url(src/poly.gif) ; /* Link to your 90s vibe background image */
+        background-repeat: repeat; /* Tile the background */
+        background-size: 150px;
+        color: #FFFFFF;
+        text-align: center;
+        padding: 20px;
     }
-    .snowflake {
-        position: absolute;
-        top: -10px;
-        color: #ffffff;
-        animation: snowfall 12s infinite linear;
+    .header {
+        font-size: 32px;
+        color: #FFFF00;
+        text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #00f, 0 0 80px #00f, 0 0 90px #00f, 0 0 100px #00f, 0 0 150px #00f;
     }
-    </style>
+    .content {
+        background-color: #000099;
+        color: #FFFFFF;
+        padding: 20px;
+        border: 3px solid #FF0000;
+        margin: 20px auto;
+        width: 80%;
+    }
+    .footer {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #FFFF00;
+        text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #00f, 0 0 80px #00f, 0 0 90px #00f, 0 0 100px #00f, 0 0 150px #00f;
+    }
+    marquee {
+        font-size: 24px;
+        background-color: #ff69b4;
+        color: #FFFFFF;
+    }
+    table {
+        margin: 20px auto;
+        border-collapse: collapse;
+    }
+    td, th {
+        border: 1px solid #FFFFFF;
+        padding: 10px;
+        color: #FFFFFF;
+    }
+    td {
+        background-color: #000066;
+    }
+    .forum {
+        background-color: #009900; /* Mimic old web forum background */
+        color: #000000;
+        margin: 20px auto;
+        padding: 10px;
+        width: 80%;
+        border: 2px dashed #FFD700; /* Gold border for that extra flair */
+    }
+    .forum-post {
+        background-color: #004400; /* Darker background for post */
+        color: #FFFFFF;
+        margin: 10px 0;
+        padding: 5px;
+    }
+    .content, .forum-post {
+    box-shadow: 5px 5px 15px #000;
+    border: 1px solid #0ff;
+    }
+    .forum-header {
+        font-weight: bold;
+        color: #FFD700; /* Gold text for headers */
+    }
+    .fake-ads .ad {
+    background-color: #900;
+    color: #ff0;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #f00;
+    box-shadow: 0 0 10px #f00;
+    text-shadow: 0 0 5px #f00;
+    }
+    /* Create a glowing effect for links to mimic neon signs */
+a {
+    color: #0ff;
+    text-decoration: none;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #00f;
+}
+</style>
 </head>
-<body>
-    <div class="container">
-        <h1 class="header">Welcome to Cirno's Wonderland</h1>
-        <p class="subheader">Discover the magic and charm of Gensokyo's beloved ice fairy</p>
-        <img class="cirno-image" src="src/cirno1.png" alt="Cirno">
-        <p>Cirno, the ice fairy from Touhou Project, is a beloved character known for her playful antics and incredible ice powers. Explore her world, learn about her abilities, and join her on adventures!</p>
-        <a href="https://www.youtube.com/watch?v=7h7bnYA1LXE" style="text-decoration:none" id="learn" class="cta-button">Learn More</a>
+<body onclick="playAudio()">
+    <div class="header">Cirno's Frozen Wonderland</div>
+    <marquee class="marquee">Feel free to stay, maybe forever</marquee>
+    <div class="content">
+        <h2>About Cirno</h2>
+        <p>Cirno, known as the Ice Fairy of the Lake, is a character from the Touhou Project, a series of bullet hell shooter games. She's often found near the Misty Lake, showcasing her power over ice to create beautiful, yet deadly, ice sculptures and bullets. Despite being considered one of the less intelligent characters in Gensokyo, her confidence and boldness brand her as the "strongest" fairy, a title she proudly claims.</p>
+        
+        <h3>Adventures and Abilities</h3>
+        <p>Cirno's adventures often revolve around her interactions with other Gensokyo residents, leading to various misunderstandings and battles. Her ability to manipulate cold and freeze anything she desires is a spectacle in itself, often leaving others in awe or in a chilly predicament.</p>
+        
+        <h3>Notable Battles and Interactions</h3>
+        <p>Cirno has had several memorable encounters throughout the Touhou series. One of her most notable battles takes place in "The Embodiment of Scarlet Devil," where she confronts the player as a stage 2 boss, showcasing her ability to control ice and challenge her opponents. In "Phantasmagoria of Flower View," Cirno's curiosity and combativeness shine through as she investigates the mysterious flower outbreak, leading to various encounters with other characters. Her role in "Fairy Wars" as the main protagonist highlights her determination and resourcefulness, offering players a deeper look into her capabilities and charm.</p>
 
-        <div class="info-box"  class="interactive-ice" id="iceEffect">
-            <h3>About Cirno</h3>
-            <p>Cirno is an ice fairy living in the land of Gensokyo. Despite her childish appearance, she possesses powerful ice-based abilities, making her a force to be reckoned with.</p>
+        <h3>Why We Love Cirno</h3>
+        <p>Her naive confidence, coupled with her undeniable strength, makes Cirno a beloved character among fans. Her simplistic view of the world, filled with wonder and a zest for challenges, reminds us of the joy of discovery and the pure thrill of competition.</p>
+        
+        <table>
+            <tr>
+                <th>Attribute</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Nickname</td>
+                <td>The Strongest Fairy</td>
+            </tr>
+            <tr>
+                <td>Abilities</td>
+                <td>Manipulation of cold, ice formation</td>
+            </tr>
+            <tr>
+                <td>Habitat</td>
+                <td>Misty Lake, Gensokyo</td>
+            </tr>
+            <tr>
+                <td>Appearances</td>
+                <td>Embodiment of Scarlet Devil, Phantasmagoria of Flower View, and more</td>
+            </tr>
+        </table>
+    </div>
+    </div>
+        <!-- Existing content -->
+
+    <!-- Simulated Forum Section -->
+    <div class="forum">
+        <div class="forum-header">Message Board</div>
+        <div class="forum-post">
+            <p><strong>Strongest Fairy:</strong> Did anyone else think Cirno's battle in EoSD was epic? Classic Cirno moment!</p>
         </div>
-
-        <div class="info-box" class="interactive-ice" id="iceEffect">
-            <h3>Cirno's Antics</h3>
-            <p>Cirno is known for her mischievous and playful personality. She often gets into trouble but always manages to find her way out with her quick thinking and ice powers.</p>
+        <div class="forum-post">
+            <p><strong>ICE COLD:</strong> Totally! I love how she claims to be the strongest, so adorable and funny. 😄</p>
         </div>
-
-        <div class="info-box" class="interactive-ice" id="iceEffect">
-            <h3>Cirno's Relationships</h3>
-            <p>Cirno has various relationships with other characters in Gensokyo. She is often seen interacting with characters like Reimu Hakurei, Marisa Kirisame, and Letty Whiterock.</p>
-        </div>
-
-        <div class="info-box" class="interactive-ice" id="iceEffect">
-            <h3>Join Cirno's Adventures</h3>
-            <p>Follow Cirno as she explores the magical world of Gensokyo, meeting new friends and facing exciting challenges along the way. Join her on her quest for fun and adventure!</p>
-        </div>
-
-        <div class="faq">
-            <h2>Frequently Asked Questions</h2>
-            <dl>
-                <dt>Who is Cirno?</dt>
-                <dd>Cirno is an ice fairy and one of the most well-known characters from the Touhou Project series, created by Team Shanghai Alice. She is often depicted as childish and somewhat naive but possesses incredible ice-based abilities.</dd>
-                
-                <dt>What are Cirno's abilities?</dt>
-                <dd>Cirno has the ability to manipulate ice and cold temperatures. She can create and control ice in various forms, such as ice bullets, barriers, and freezing spells. Despite her childish nature, her powers are formidable.</dd>
-                
-                <dt>Is Cirno a protagonist or antagonist?</dt>
-                <dd>Cirno's role varies depending on the game or story within the Touhou Project series. While she is often portrayed as mischievous and playful, she can also be seen as a protagonist in some scenarios, helping others or going on her own adventures.</dd>
-                
-                <!-- Add more FAQs as needed -->
-            </dl>
+        <div class="forum-post">
+            <p><strong>Suwako:</strong> Does anyone have tips for dodging her ice attacks? I always get frozen...</p>
         </div>
     </div>
+    <!-- Fake Ads Section -->
+<div class="fake-ads">
+    <h2>Special Offers</h2>
+    <div class="ad" style="background-color: #ff00ff; color: #ffffff; padding: 10px; margin-bottom: 10px;">
+        <marquee>🌟 Magic Ice Crystals - Only 99 yen! Enhance your spells today! 🌟</marquee>
+    </div>
+    <div class="ad" style="background-color: #00ffff; color: #000000; padding: 10px; margin-bottom: 10px;">
+        <marquee behavior="alternate">🎮 New Game: "Cirno's Adventure" - Pre-order and get an exclusive soundtrack! 🎮</marquee>
+    </div>
+    <div class="ad" style="background-color: #ffff00; color: #000000; padding: 10px;">
+        <marquee>📘 "The Strongest Fairy" - A biography of Cirno. Available now! 📘</marquee>
+    </div>
+</div>
+<div class="gallery">
+    <div class="gallery-item small"></div>
+    <div class="gallery-item medium"></div>
+    <div class="gallery-item large"></div>
+    <!-- Add more items as needed -->
+</div>
 
-    <footer>
-        &copy; 2024 Cirno's Wonderland | Made with <i class="fas fa-heart" style="color: #ff4d4d;"></i> by csp_rea
-    </footer>
+<audio id="audio" loop src="src/puru.mp3"></audio>
+
+<script>
+  
+    function playAudio() {
+     var audio = document.getElementById("audio");
+     audio.play();
+    
+    }
+    </script>  
+
+    <div class="footer">
+        © 2024 Cirno's Fan Club. All rights reserved.
+    </div>
 
 </body>
 </html>
